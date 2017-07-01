@@ -1,0 +1,79 @@
+/* Header Box, Text Field and Add button */
+
+.header {
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+#input-item {
+    width: 60%;
+    height: 20px;
+    font-size: 17px;
+    margin-right: 0;
+}
+
+#addbtn {
+    padding: 5px 20px 3px 20px;
+    margin-left: -4px;
+    background: #d9d9d9;
+    color: #555;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#addbtn:hover {
+    background-color: #bbb;
+}
+
+
+/* List Items */
+
+#list {
+    margin: auto;
+    display: block;
+}
+
+.list-item {
+    height: 25px;
+    width: 75%;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px #888888;
+    margin-left: 75px;
+    padding-top: 6px;
+    padding-left: 10px;
+}
+
+.done {
+    text-decoration: line-through;
+    background-color: #f99;
+}
+
+
+/* For when I had it set as a UL instead of Ps */
+
+ul {
+    list-style-type: none;
+}
+
+
+/* Remove button on each list item */
+
+.remove {
+    width: 50px;
+    float: right;
+    height: 20px;
+    margin-top: -6px;
+    margin-right: 0;
+    margin-bottom: -10px;
+    padding: 5px 13px 6px 15px;
+}
+
+.remove:hover {
+    background-color: #f44336;
+    color: white;
+}

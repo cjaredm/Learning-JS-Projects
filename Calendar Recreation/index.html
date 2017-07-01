@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calendar</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="Calendar">
+        <div class="hidden" id="popup">
+            <div class='popbox'>
+                <h2>New Calendar Event</h2>
+                <input type='text' placeholder="Title..." class='popbox__input' id='title' size='40'><br>
+                <input type="text" placeholder="Notes..." class='popbox__input' id="notes" size='40'><br>
+                <button id='submit'>submit</button>
+                <button id='cancel'>cancel</button>
+            </div>
+        </div>
+        <div class="Calendar__picker-container">
+            <div class="Calendar__picker">
+                <div class='header'>
+                    <div id='Month-Back'>Back</div>
+                    <h1 class="Calendar__month">September</h1>
+                    <div id='Month-Next'>Next</div>
+                </div>
+                <div class="Calendar__days-bar">
+                    <span class="Calendar__days-bar__day">Mon</span>
+                    <span class="Calendar__days-bar__day">Tue</span>
+                    <span class="Calendar__days-bar__day">Wed</span>
+                    <span class="Calendar__days-bar__day">Thr</span>
+                    <span class="Calendar__days-bar__day">Fri</span>
+                    <span class="Calendar__days-bar__day">Sat</span>
+                    <span class="Calendar__days-bar__day">Sun</span>
+                </div>
+
+                <div class="Calendar__days">
+                    <div class="Calendar__week Calendar__week--1">
+                        <div class="Calendar__day day__notmonth"><span>31</span></div>
+                        <div class="Calendar__day"><span>01</span></div>
+                        <div class="Calendar__day"><span>02</span></div>
+                        <div class="Calendar__day"><span>03</span></div>
+                        <div class="Calendar__day"><span>04</span></div>
+                        <div class="Calendar__day"><span>05</span></div>
+                        <div class="Calendar__day"><span>06</span></div>
+                    </div>
+                    <div class="Calendar__week Calendar__week--2">
+                        <div class="Calendar__day"><span>07</span></div>
+                        <div class="Calendar__day"><span>08</span></div>
+                        <div class="Calendar__day"><span>09</span></div>
+                        <div class="Calendar__day"><span>10</span></div>
+                        <div class="Calendar__day"><span>11</span></div>
+                        <div class="Calendar__day"><span>12</span></div>
+                        <div class="Calendar__day"><span>13</span></div>
+                    </div>
+                    <div class="Calendar__week Calendar__week--3">
+                        <div class="Calendar__day"><span>14</span></div>
+                        <div class="Calendar__day"><span>15</span></div>
+                        <div class="Calendar__day"><span>16</span></div>
+                        <div class="Calendar__day"><span>17</span></div>
+                        <div class="Calendar__day"><span>18</span></div>
+                        <div class="Calendar__day"><span>19</span></div>
+                        <div class="Calendar__day"><span>20</span></div>
+                    </div>
+                    <div class="Calendar__week Calendar__week--4">
+                        <div class="Calendar__day"><span>21</span></div>
+                        <div class="Calendar__day"><span>22</span></div>
+                        <div class="Calendar__day"><span>23</span></div>
+                        <div class="Calendar__day active-day"><span>24</span></div>
+                        <div class="Calendar__day"><span>25</span></div>
+                        <div class="Calendar__day"><span>26</span></div>
+                        <div class="Calendar__day"><span>27</span></div>
+                    </div>
+                    <div class="Calendar__week Calendar__week--5">
+                        <div class="Calendar__day"><span>28</span></div>
+                        <div class="Calendar__day"><span>29</span></div>
+                        <div class="Calendar__day"><span>30</span></div>
+                        <div class="Calendar__day day__notmonth"><span>01</span></div>
+                        <div class="Calendar__day day__notmonth"><span>02</span></div>
+                        <div class="Calendar__day day__notmonth"><span>03</span></div>
+                        <div class="Calendar__day day__notmonth"><span>04</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Calendar__list" id="list">
+            <div class="Calendar__list-item">
+                <div class="Calendar__avatar">
+                    <img src="http://i.pravatar.cc/100?img=1" />
+                </div>
+                <div class="Calendar__list-item__content">
+                    <h2>Karl Snoopy's Birthday</h2>
+                    <strong>All day</strong>
+                </div>
+                <div class="Calendar__checkbox Calendar__checkbox--checked"></div>
+            </div>
+
+            <div class="Calendar__list-item">
+                <div class="Calendar__avatar">
+                    <img src="http://i.pravatar.cc/100?img=2" />
+                </div>
+                <div class="Calendar__list-item__content">
+                    <h2>Lunch Meeting</h2>
+                    <strong>Lunch with Olly at Alfredo's Cafe</strong>
+                </div>
+                <div class="Calendar__checkbox"></div>
+            </div>
+
+            <div class="Calendar__list-item">
+                <div class="Calendar__avatar"><img src="http://i.pravatar.cc/100?img=3" /></div>
+                <div class="Calendar__list-item__content">
+                    <h2>Missed Call - Tony Frost</h2>
+                    <strong>3:28pm - Please return call</strong>
+                </div>
+                <div class="Calendar__checkbox Calendar__checkbox--checked"></div>
+            </div>
+        </div>
+    </div>
+    <div id='addbtn'>+</div>
+    <script src="main.js"></script>
+</body>
+
+</html>

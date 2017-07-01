@@ -1,0 +1,244 @@
+html,
+body {
+    margin: 0;
+}
+
+.Calendar {
+    font-family: Lato, sans-serif;
+}
+
+.Calendar__picker:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 420px;
+    position: absolute;
+    z-index: -1;
+    background-image: url("http://media02.hongkiat.com/planet-earth-space-wallpapers/sci_fi-space.jpg");
+    background-size: cover;
+    filter: blur(10px);
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#Month-Back,
+#Month-Next {
+    border: 3px solid white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 6px 10px;
+    color: white;
+}
+
+#Month-Back:hover,
+#Month-Next:hover {
+    border-color: teal;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 7px 0;
+    color: white;
+    justify-content: center;
+}
+
+.Calendar__days-bar {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-transform: uppercase;
+    border-color: grey;
+    color: grey;
+    height: 35px;
+    font-size: 20px;
+}
+
+.Calendar__days-bar__day {
+    text-align: center;
+    width: calc(100% / 7);
+    display: inline-block;
+    margin: 5px -3px;
+}
+
+#active-day span {
+    border-radius: 50%;
+    height: 100%;
+    border: 2px solid white;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.Calendar__day {
+    text-align: center;
+    width: calc(100% / 7);
+    display: inline-block;
+    margin: 23px -3px;
+    color: white;
+    font-size: 20px;
+}
+
+.Calendar__day span:hover {
+    color: grey;
+    border-color: grey;
+    border-radius: 50%;
+    border: 2px solid grey;
+    cursor: pointer;
+    margin: -3px -3px;
+    padding: 10px;
+}
+
+.day__notmonth {
+    color: grey;
+}
+
+.Calendar__list {
+    width: 620px;
+    border: 1px solid teal;
+    border-top: none;
+    margin: auto;
+}
+
+.Calendar__list-item {
+    position: relative;
+    border-top: 1px solid teal;
+}
+
+.Calendar__avatar {
+    display: inline-block;
+    margin: 10px 10px;
+    border: 1px solid teal;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.Calendar__avatar img {
+    border: 1px solid teal;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.Calendar__list-item__content {
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    position: absolute;
+    padding-left: 30px;
+    color: lightslategray;
+}
+
+.Calendar__list-item__content h2 {
+    margin: 0;
+    color: teal;
+}
+
+.Calendar__checkbox {
+    display: inline-block;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 3px solid teal;
+    top: 50%;
+    /* Totally made up this X axis move. It was that or a margin left thing */
+    transform: translateY(-50%) translateX(750%);
+}
+
+.Calendar__checkbox:hover {
+    cursor: pointer;
+}
+
+
+/* Placeholder until I can figure out the checkmark */
+
+.Calendar__checkbox--checked {
+    background-color: black;
+}
+
+#addbtn {
+    height: 40px;
+    width: 100%;
+    background-color: teal;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    opacity: .5;
+}
+
+#addbtn:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#popup {
+    /*Make it sit on top*/
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.popbox {
+    width: 400px;
+    height: 200px;
+    margin: 200px auto;
+    background-color: teal;
+}
+
+.popbox h2 {
+    padding-top: 20px;
+    color: white;
+    text-align: center;
+}
+
+.popbox__input {
+    margin: 3px auto;
+    transform: translateX(30%);
+}
+
+#cancel,
+#submit {
+    margin-top: 15px;
+    transform: translateX(300%);
+}
+
+
+/** CENTERING **/
+
+
+/** Horizontal center **/
+
+
+/*.someElement {
+    text-align: center;
+}
+
+.someElement {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.someElement {
+    vertical-align: middle;
+}
+
+.someElement {
+    position: relative;
+    position: absolute;
+}*/
