@@ -1,41 +1,26 @@
 //Flex Panels Open and close
-
-const panel = document.querySelectorAll('.panel');
-const panelOne = document.querySelector('panel1');
-const panelTwo = document.querySelector('panel2');
-const panelThree = document.querySelector('panel3');
+const panels = document.querySelectorAll('.panel');
 
 //Toggle Open a new panel
 function toggleOpen(e) {
-
     //This will close all open panels before the new one is opened
-    var open = document.querySelector('.open');
+    const open = document.querySelector('.open');
     if (open) {
         open.classList.remove('open');
     }
-
-    /*while (open.length) {
-        open[0].classList.remove('open');
-    }*/
     e.target.classList.toggle('open');
 }
-//Trying to figure out how to be able to toggle close an open panel
-function reset() {
-    this.classList.toggle('open');
-}
 
-//Toggles the flyin text when panel opens and closes.
+//Toggles the fly-in text when panel opens and closes.
 function toggleActive(e) {
-
     if (e.propertyName.includes('flex')) {
         this.classList.toggle('open-active');
     }
 }
 
 //Event Listeners for Flex Panels
-panel.forEach(panel => panel.addEventListener('dblclick', reset));
-panel.forEach(panel => panel.addEventListener('click', toggleOpen));
-panel.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 
 
 
@@ -56,5 +41,38 @@ window.addEventListener('keyup', (e) => {
 
 });
 
-
 // NEXT SECTION
+// Radial Animation //http://jsfiddle.net/loktar/uhVj6/4/
+
+const canvas = document.querySelector('#radialOne');
+const context = canvas.getContext('2d');
+
+//Starting coordinates
+const x = canvas.width / 2; //middle of canvas
+const y = canvas.height / 2; //middle of canvas
+const radius = 90; //Radius of circle in pixels
+const endPercent = 77; //Ending % of circle
+let curPerc = 0; //Compared to endPercent so it knows to end.
+const fullCircle = Math.PI * 2; //= 360 degrees in radians
+const quarterClock = Math.PI / 2; //This equals 25% of a circle used later to move start point from 3 o'clock to 12.
+
+context.lineWidth = 10; // Line width
+context.strokeStyle = '#ad2323'; //Line Color
+
+
+function animate(current) {
+    context.clearRect(0, 0, canvas.width, canvas.height); //Clear Canvas to empty
+    context.beginPath();
+    //https://www.w3schools.com/tags/canvas_arc.asp
+    context.arc(x, y, radius, -(quarterClock), ((fullCircle) * current) - quarterClock, false);
+    context.stroke(); //Draw the line
+    curPerc++; // +1%
+
+    if (curPerc < endPercent) { //If the +1 didn't put it to the endPercent then do it again, starting at the current percentage
+        requestAnimationFrame(() => {
+            animate(curPerc / 100)
+        });
+    }
+}
+
+animate();
