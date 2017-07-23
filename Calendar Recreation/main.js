@@ -78,7 +78,6 @@ window.onload = function() {
                 var vars = document.createElement(elType);
             }
 
-            function addAtrib()
 
 
 
