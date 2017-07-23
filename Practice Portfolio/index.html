@@ -13,76 +13,127 @@
 </head>
 
 <body>
-    <!-- Header section including Logo and Nav-->
-    <div class="header">
-        <div class="logo">
-            <h1>JMort</h1>
-        </div>
-    </div>
-
-    <div class="nav">
-        <ul>
-            <li class="active"><a href="#Portfolio">Portfolio</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Contact">Contact</a></li>
-        </ul>
-    </div>
 
     <!-- Flex Panel Section, 3 wide -->
-    <div class="panels">
-        <div class="panel panel1">
-            <p>HTML / CSS</p>
-            <p>Coding</p>
-            <p>JavaScript</p>
-        </div>
-        <div class="panel panel2">
-            <p>Online</p>
-            <p>Instructional Design</p>
-            <p>5+ Years XP</p>
-        </div>
-        <div class="panel panel3">
-            <p><a href="#">Master of Ed.</a></p>
-            <p>Training</p>
-            <p><a href="#">Resume</a></p>
+    <div id="Home">
+        <div class="panels">
+            <div class="panel panel1">
+                <p>HTML / CSS</p>
+                <p>Coding</p>
+                <p>JavaScript/Node JS</p>
+            </div>
+            <div class="panel panel2">
+                <p>Master of Ed.</p>
+                <p>Training</p>
+                <p>5+ Years XP</p>
+            </div>
+            <div class="panel panel3">
+                <p><a href="#">Add another</a></p>
+                <p>Resume</p>
+                <p><a href="#">Resume</a></p>
+            </div>
         </div>
     </div>
-    <!-- About Section, Radial Percentages -->
-    <div class="Skills">
+
+
+
+
+
+    <!-- Header section including Logo and Nav-->
+    <nav class="nav" id="Profiles">
         <ul>
-            <li>
-                <canvas id="radialOne" width="200" height="200" data-num="78"></canvas>
-                <span class="int">7</span>
-                <span class="dec">.19</span>
-            </li>
+            <li class="logo">JaredM</li>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Profiles">Profiles</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Contact">Contact</a></li>
         </ul>
-    </div>
+    </nav>
+
+
+
+
     <!-- Profile Links thin section (GitHub, Twitter, LinkedIN, Resume, Konami Code hint) -->
-    <div class="links-bar">
+    <div class="links-bar" id="About">
         <ul>
             <li>
                 <a href="https://github.com/cjaredm"><img src="img/logo-github.png" alt="GitHub"></a>
             </li>
-            <li>
+            <li class="Twitter">
                 <a href="https://twitter.com/cjaredm"><img src="img/logo-twitter.png" alt="Twitter"></a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/jaredmortenson/"><img src="img/logo-linkedin.png" alt="LinkedIN"></a>
+                <a href="https://www.linkedin.com/in/jaredmortenson/"><img src="img/logo-linkedin.png" alt="LinkedIn"></a>
             </li>
             <li>
                 <img id="konami" src="img/codekonami.png" alt="Konami Code">
             </li>
             <li>
-                <a href=""><img src="" alt="Resume"></a>
+                <a href=""><img src="img/resumeIcon.png" alt="Resume"></a>
             </li>
         </ul>
     </div>
-    <!-- Portfolio Section 3 wide, at leat 2 down, slide up on scroll -->
+    <!-- About Section, Radial Percentages -->
+    <div class="profile" id="none">
+        <div class="profile_picture">
+            <img src="img/JaredProfilePic.jpg" height="280" width="280">
+        </div>
+        <div class="profile_info">
+            <div class="profile_info__skills">
+                <ul>
+                    <li>
+                        <div class="radialDivs">
+                            <canvas class="radials" id="radialOne" width="100" height="100" data-num="10" data-color="#ad2323"></canvas>
+                            <div>Skill 1</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radialDivs">
+                            <canvas class="radials" id="radialTwo" width="100" height="100" data-num="25" data-color="blue"></canvas>
+                            <div>Skill 2</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radialDivs">
+                            <canvas class="radials" id="radialThree" width="100" height="100" data-num="50" data-color="orange"></canvas>
+                            <div>Skill 3</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radialDivs">
+                            <canvas class="radials" id="radialFour" width="100" height="100" data-num="75" data-color="yellow"></canvas>
+                            <div>Skill 4</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radialDivs">
+                            <canvas class="radials" id="radialFive" width="100" height="100" data-num="80" data-color="purple"></canvas>
+                            <div>Skill 5</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile_info__about">
+                <h3>About Section</h3>
+                <p>So this is the about me section where I talk about myself and see how it shows up on the page. Hoefully it will be displayed centered and below the skills radials that I have. I hope I can get the radials to animate when they show up on
+                    the page, each time</p>
+            </div>
+        </div>
+    </div>
 
+    <!-- Portfolio Section 3 wide, at leat 2 down, slide up on scroll -->
+    <div id="Portfolio">
+
+    </div>
 
     <!-- Footer, 3 sections wide (Page Links / Profile Links / Contact Me Form) -->
+    <div id="Contact">
+
+    </div>
 
 
 </body>
-<script src="scripts/scripts.js"></script>
+<script src="dist/bundle.js"></script>
 
 </html>
