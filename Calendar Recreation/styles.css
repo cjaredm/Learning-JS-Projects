@@ -162,7 +162,7 @@ h1 {
 /* Placeholder until I can figure out the checkmark */
 
 .Calendar__checkbox--checked {
-    background-color: black;
+    background-color: teal;
 }
 
 #addbtn {

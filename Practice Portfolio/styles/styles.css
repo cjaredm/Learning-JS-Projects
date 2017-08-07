@@ -11,15 +11,24 @@ body {
     margin: 0;
 }
 
+.site-wrap {
+    transform: scale(0.95);
+    transition: transform 0.5s;
+}
+
 
 /*Header and Navagation*/
+
+.fixed-nav .site-wrap {
+    transform: scale(1);
+}
 
 .fixed-nav li.logo {
     max-width: 500px;
 }
 
 .nav {
-    background: black;
+    background: white;
     top: 0;
     width: 100%;
     transition: all 0.5s;
@@ -68,7 +77,8 @@ li.logo a {
     text-decoration: none;
     padding: 20px;
     display: inline-block;
-    color: white;
+    color: black;
+    font-size: 20px;
     transition: all 0.2s;
     text-transform: uppercase;
 }
@@ -169,6 +179,10 @@ li.logo a {
 
 /* Links Bar*/
 
+.links-bar {
+    margin-top: 30px;
+}
+
 .links-bar img {
     position: relative;
     height: 70px;
@@ -198,6 +212,7 @@ li.logo a {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 .profile_picture {}
@@ -241,4 +256,47 @@ li.logo a {
     justify-content: center;
     width: 490px;
     margin-left: 50px;
+}
+
+
+/* Portfolio Grid */
+
+.portfolio_grid {
+    margin: 50px 10%;
+    display: flex;
+    /* establish flex container */
+    flex-wrap: wrap;
+    /* enable flex items to wrap */
+    justify-content: space-around;
+}
+
+.portfolio_grid__item {
+    text-align: center;
+    flex: 0 0 300px;
+    /* don't grow, don't shrink, width */
+    height: 300px;
+    margin: 15px 10px 15px 10px;
+    margin-bottom: 15px;
+    /* background-color: #999; */
+}
+
+.portfolio_grid__title {
+    /* font-weight: bold; */
+}
+
+
+/* Contact section */
+
+#footer {
+    background-color: #383838;
+    min-height: 400px;
+    display: flex;
+}
+
+#footer ul {
+    list-style: none;
+}
+
+.footer_column {
+    flex: 1 1 33%;
 }

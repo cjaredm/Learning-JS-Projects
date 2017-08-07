@@ -70,11 +70,13 @@
 "use strict";
 
 
-//import {konami} from './src/components/Component';
+//import {something} from './src/components/queryDOM';
+//import { konami } from './src/components/Component';
 
 
 /**************Flex Panels Open and close****************/
 var panels = document.querySelectorAll('.panel');
+var ps = document.querySelectorAll('p');
 
 //Toggle Open a new panel
 function toggleOpen(e) {
@@ -95,7 +97,7 @@ function toggleActive(e) {
 
 //Event Listeners for Flex Panels
 panels.forEach(function (panel) {
-    return panel.addEventListener('click', toggleOpen);
+    return panel.addEventListener('click', toggleOpen, { capture: true });
 });
 panels.forEach(function (panel) {
     return panel.addEventListener('transitionend', toggleActive);
@@ -212,6 +214,7 @@ function onScreenYet(e) {
 }
 window.addEventListener('scroll', debounce(onScreenYet));
 
+//leave this here.
 radials.forEach(function (radial) {
     var id = radial.getAttribute('id');
     var radialCircle = document.querySelector('#' + id);

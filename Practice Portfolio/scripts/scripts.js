@@ -4,6 +4,7 @@
 
 /**************Flex Panels Open and close****************/
 const panels = document.querySelectorAll('.panel');
+const ps = document.querySelectorAll('p');
 
 //Toggle Open a new panel
 function toggleOpen(e) {
@@ -23,7 +24,7 @@ function toggleActive(e) {
 }
 
 //Event Listeners for Flex Panels
-panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+panels.forEach(panel => panel.addEventListener('click', toggleOpen, { capture: true }));
 panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 
 
